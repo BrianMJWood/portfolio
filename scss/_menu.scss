@@ -37,7 +37,6 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.9;
     visibility: hidden;
 
     &.show {
@@ -54,6 +53,7 @@
         width: 50%;
         height: 100vh;
         overflow: hidden;
+        background: rgba(darken($primary-color, 5), 0.9);
     }
 
     &-nav {
@@ -74,6 +74,7 @@
         padding: 0;
         background: $primary-color;
         list-style: none;
+        background: rgba($primary-color, 0.9);
         transform: translate3d(0, 100%, 0);
         @include easeOut;
 
