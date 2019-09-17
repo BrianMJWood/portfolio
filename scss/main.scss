@@ -28,7 +28,6 @@ h3 {
     &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, 2), 0.5);
     }
 }
 
@@ -45,6 +44,12 @@ header {
 
 .text-secondary {
     color: $secondary-color;
+}
+
+.text-secondaryBright {
+    color: lighten($secondary-color, 10);
+    font-weight: 400;
+    font-size: 18px;
 }
 
 main {
@@ -81,7 +86,7 @@ main {
     grid-template-areas:
         'bioimage bio bio'
         'job1 job2 job3';
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
     .bio-image {
         grid-area: bioimage;
@@ -102,17 +107,10 @@ main {
         grid-area: job1
     }
 
-    .job-2 {
-        grid-area: job2
-    }
-
-    .job-3 {
-        grid-area: job3
-    }
 
     .job {
         background: lighten($primary-color, 5);
-        padding: 0.5rem;
+        padding: 1.5rem;
         border-bottom: $secondary-color 5px solid;
     }
 }
@@ -123,8 +121,10 @@ main {
     grid-gap: 0.7rem;
 
     img {
-        width: 100%;
+
         border: 3px #fff solid;
+
+        width: 100%;
 
         &:hover {
             opacity: 0.5;
@@ -168,6 +168,10 @@ main {
     padding: 0.5rem 1rem;
     border: 0;
     margin-bottom: 0.3rem;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    @include easeOut;
 
     &:hover {
         background: $secondary-color;
@@ -177,12 +181,14 @@ main {
 .btn-dark {
     @extend .btn;
     background: darken($primary-color, 50);
+    margin-bottom: 40px;
 }
 
 .btn-light {
     @extend .btn;
     background: lighten($primary-color, 50);
-    color: #333
+    color: #333;
+    margin-bottom: 40px;
 }
 
 #main-footer {
